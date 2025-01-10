@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_launcher_background"
+        android:alpha="0.7"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/main_SCORE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/container_margin"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_LEFT_ARROW_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/left_arrow"
+        android:layout_margin="@dimen/default_margin"
+        app:srcCompat="@drawable/arrow_left"
+        android:backgroundTint="@color/blue_400"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_RIGHT_ARROW_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/right_arrow"
+        android:layout_margin="@dimen/default_margin"
+        app:srcCompat="@drawable/arrow_right"
+        android:backgroundTint="@color/blue_400"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_hearts_container"
+        android:layout_width="@dimen/hearts_container_width"
+        android:layout_height="@dimen/hearts_container_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/container_margin">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_HEART1"
+            android:layout_width="@dimen/heart_width"
+            android:layout_height="@dimen/heart_height"
+            app:srcCompat="@drawable/heart_icon"
+            android:layout_weight="1"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_HEART2"
+            android:layout_width="@dimen/heart_width"
+            android:layout_height="@dimen/heart_height"
+            app:srcCompat="@drawable/heart_icon"
+            android:layout_weight="1"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_HEART3"
+            android:layout_width="@dimen/heart_width"
+            android:layout_height="@dimen/heart_height"
+            app:srcCompat="@drawable/heart_icon"
+            android:layout_weight="1"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <GridLayout
+        android:id="@+id/game_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </GridLayout>
+
+</RelativeLayout>
